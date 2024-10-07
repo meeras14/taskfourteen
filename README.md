@@ -10,37 +10,21 @@ This repository provides step-by-step instructions for setting up a web server o
 2. Use the following SSH command to log in to your VM:
    ```bash
    ssh -i /path-to-private_key username@<your-vm-public-ip>
-3.Here’s the complete content for your **README.md** in GitHub Markdown format:
-
-```markdown
-# Task Fourteen - Web Server Setup on Cloud VM
-
-## Description
-This repository contains detailed steps for setting up a web server on a cloud-hosted Virtual Machine (VM). The setup includes SSH login, cloning an HTML page, configuring Apache, installing PHP and MySQL, and creating a registration and login system with PHP.
-
-## Steps
-
-### 1. Log in to Your Cloud VM via SSH
-1. Open your Kali Linux terminal.
-2. Use the following SSH command to log in to your VM:
-   ```bash
-   ssh -i /path-to-private_key username@<your-vm-public-ip>
-   ```
 3. **Screenshot**: Capture a screenshot showing a successful SSH login.
 
-### 2. Clone the Repository from Task Twelve
+### 4. Clone the Repository from Task Twelve
 1. After logging into the VM, clone your Task 12 repository from GitHub:
    ```bash
    git clone https://github.com/yourusername/tasktwelve.git
    ```
 
-### 3. Copy Files to Apache Web Server Root Directory
+### 5. Copy Files to Apache Web Server Root Directory
 1. Copy the HTML and related files from the cloned `tasktwelve` folder to the root directory of the Apache web server:
    ```bash
    sudo cp -r tasktwelve/* /var/www/html/
    ```
 
-### 4. Start the Apache Web Server
+### 6. Start the Apache Web Server
 1. Ensure Apache is installed. If not, install it using:
    ```bash
    sudo apt install apache2
@@ -54,14 +38,14 @@ This repository contains detailed steps for setting up a web server on a cloud-h
    sudo systemctl status apache2
    ```
 
-### 5. Access the Web Page via Browser
+### 7. Access the Web Page via Browser
 1. Open a web browser on your local machine and enter the public IP of your cloud VM:
    ```bash
    http://<your-vm-public-ip>
    ```
 2. **Screenshot**: Capture a screenshot of the webpage being served from the cloud VM.
 
-### 6. Install PHP and MySQL on the VM
+### 8. Install PHP and MySQL on the VM
 1. If PHP and MySQL are not already installed, run the following commands:
 
    **Install PHP**:
@@ -75,7 +59,7 @@ This repository contains detailed steps for setting up a web server on a cloud-h
    sudo apt install mysql-server
    ```
 
-### 7. Start MySQL Server and Log in
+### 9. Start MySQL Server and Log in
 1. Start the MySQL service:
    ```bash
    sudo systemctl start mysql
@@ -85,7 +69,7 @@ This repository contains detailed steps for setting up a web server on a cloud-h
    sudo mysql -u root -p
    ```
 
-### 8. Create a Database, Table, and User in MySQL
+### 10. Create a Database, Table, and User in MySQL
 1. Inside the MySQL shell, run the following commands to create a database, table, and user:
 
    **Create Database**:
@@ -105,20 +89,20 @@ This repository contains detailed steps for setting up a web server on a cloud-h
    ```
 2. **Screenshot**: Capture a screenshot showing the creation of the database, table, and user in MySQL.
 
-### 9. Create a PHP Script for User Registration
+### 11. Create a PHP Script for User Registration
 1. Write a PHP registration script (`register.php`) that allows users to register with their username, email, and password. Ensure that the script inserts the data into the `users` table of the `userdb` database.
 2. Access the registration page in your browser:
    ```bash
    http://<your-vm-public-ip>/register.php
    ```
 
-### 10. Log in as the Registered User
+### 12. Log in as the Registered User
 1. After registering a new user, log in with the same credentials.
 2. **Screenshot**: Capture a screenshot showing a successful login.
 
-### 11. Share the Public IP of Your Web Server
+### 13. Share the Public IP of Your Web Server
 1. Share the public IP of your web server with friends or colleagues to verify if they can access the registration and login pages.
 
-### 12. Public IP
+### 14. Public IP
 The public IP of my VM: `20.193.150.163`
 
